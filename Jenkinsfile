@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('checkout') {
       steps {
-        git(url: 'https://github.com/SarhanMoh/final-python/tree/main', changelog: true, poll: true, branch: 'main')
+        git(url: 'https://github.com/SarhanMoh/final-python', changelog: true, poll: true, branch: 'main')
       }
     }
 
