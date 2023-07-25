@@ -14,7 +14,7 @@ pipeline {
 
     stage('build') {
       steps {
-        sh 'docker build -t test:$BUILD_ID .'
+        sh 'docker build -t test2:$BUILD_ID .'
       }
     }
 
