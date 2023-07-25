@@ -18,5 +18,14 @@ pipeline {
       }
     }
 
+    stage('run & test') {
+      steps {
+        sh 'docker run --name test -d -p 9229:9230 test:$BUILD_ID'
+        sleep 3
+        sh 'curl localhost:8080'
+        sh 'docker stop test && docker rm test'
+      }
+    }
+
   }
 }
