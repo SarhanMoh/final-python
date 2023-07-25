@@ -12,5 +12,11 @@ pipeline {
       }
     }
 
+    stage('build') {
+      steps {
+        sh 'docker build -t test:$BUILD_ID .'
+      }
+    }
+
   }
 }
